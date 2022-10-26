@@ -1,0 +1,468 @@
+
+header
+  position: relative
+
+nav
+  height: 50px
+  background: #212121
+  position: fixed
+  z-index: 100
+  width: 100%
+
+
+.hamburger
+  display: none
+
+.menu
+  display: flex
+  justify-content: space-between
+  padding: 13px 70px
+  margin: 0
+  list-style-type: none
+
+  .menu_link
+    color: #ffffff
+    font-weight: 300
+    font-size: 15px
+    text-decoration: none
+
+  .menu_item
+    border-right: 2px dotted black
+    padding-right: 48px
+    &:last-child
+      border-right: none
+
+.subheader
+  position: absolute
+  width: 100%
+  height: 87px
+  background: rgba(0, 0, 0, 0.6)
+  margin-top: 50px
+
+  .subheader_logo
+    display: block
+    margin-top: 16px
+    max-width: 100%
+    .img
+      vertical-align: middle
+      border-style: none 
+
+  .subheader_official
+    margin-top: 6px
+    font-weight: 100
+    font-size: 13px
+    color: #FFFFFF
+    opacity: 0.5
+
+  .subheader_call
+    margin-top: 16px
+    font-weight: 300
+    font-size: 12px
+    text-align: right
+    color: #FFFFFF
+
+  .subheader_phone
+    display: block
+    margin-top: 8px
+    font-weight: 400
+    font-size: 22px
+    line-height: 18px
+    text-align: right
+    text-transform: uppercase
+    text-decoration: none
+    color: #FFFFFF
+
+  &_btn
+    font-weight: 400
+    font-size: 14px
+    text-transform: uppercase
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
+    color: #FFFFFF
+    margin-top: 21px
+    width: 172px
+    height: 46px
+    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
+    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
+    border: none
+    border-radius: 4px 
+    cursor: pointer
+    +btn_hover
+
+
+.promo
+  min-height: 800px
+  background: url(../img/Web/Bg/uber_bg.jpg) center (center / cover) no-repeat
+  padding: 150px 0 135px 0
+
+  .promo_header
+    font-weight: 900
+    font-size: 60px
+    line-height: 60px
+    margin: 0
+    text-transform: uppercase
+    color: #FFFFFF
+    text-align: center
+
+  .promo_subheader
+    font-weight: 700
+    font-size: 36px
+    line-height: 36px
+    margin: 0
+    margin-top: 22px
+    text-transform: uppercase
+    color: #FFFFFF
+    text-align: center
+
+  .promo_dec
+    margin-top: 30px
+    font-weight: 400
+    font-size: 18px
+    color: #FFFFFF
+    text-align: center
+    line-height: 24px
+
+  &_btn
+    display: block
+    margin: 118px auto 0 auto
+    font-weight: 400
+    font-size: 14px
+    text-transform: uppercase
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
+    color: #FFFFFF
+    width: 172px
+    height: 46px
+    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
+    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
+    border: none
+    border-radius: 4px
+    +btn_hover
+    
+
+.start
+  padding: 71px 0 65px 0
+
+.start_lable
+  @include lable_black
+
+
+.header_start
+  @include header_black
+
+
+.start .start_block
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-top: 35px
+
+  .start_img
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 26px
+    width: 113px
+    height: 113px
+    background-color: $blue_color
+    border-radius: 100%
+
+  .start_descr
+    width: 343px
+
+    .start_sudtitle
+      line-height: 21px
+      color: $blue_color
+      font-size: 17px
+      font-weight: 400
+
+    .start_text
+      color: #202020
+      font-size: 15px
+      font-weight: 300
+      line-height: 21px
+
+.mobile
+  min-height: 864px
+  background: url('../img/Web/Bg/mobile_bg.png') center (center / cover) no-repeat
+  padding: 48px 0 79px 0
+  
+  .row
+    margin-top: 32px
+  &_item
+    position: relative
+    width: 320px
+    height: 280px
+    margin: 0 auto
+    margin-bottom: 19px
+    padding-top: 92px
+    &_1
+      background: url('../img/Web/Card/Карточка 1.png') center (center / cover) no-repeat
+    &_2
+      background: url('../img/Web/Card/Карточка 2.png') center (center / cover) no-repeat
+    &_3
+      background: url('../img/Web/Card/Карточка 3.png') center (center / cover) no-repeat
+    &_4
+      background: url('../img/Web/Card/Карточка 4.png') center (center / cover) no-repeat
+    &_5
+      background: url('../img/Web/Card/Карточка 5.png') center (center / cover) no-repeat
+    &_6
+      background: url('../img/Web/Card/Карточка 6.png') center (center / cover) no-repeat
+    &_subtittle   
+      color: #FFFFFF
+      font-weight: 400
+      font-size: 24px
+      text-align: center
+      text-transform: uppercase
+    &_plus
+      display: flex
+      justify-content: center
+      align-items: center 
+      position: absolute
+      bottom: 35px
+      left: 50% /* це відсутуп з права на 50% */
+      transform: translate(-50%) /* а це відсутп з ліва тоже на 50% щоб іконка була рівно по середині */
+      width: 29px
+      height: 29px
+      background: #000000
+      margin: 0 auto
+      border-radius: 100%
+      cursor: pointer
+      &:before
+        content:''
+        display: block
+        width: 14px
+        height: 2px
+        background-color: $blue_color
+        transition: 0.3s all
+      &:After
+        content: ''
+        position: absolute
+        left: 50%
+        transform: translate(-50%)
+        display: block
+        height: 14px
+        width: 2px
+        background-color: $blue_color
+        transition: 0.3s all
+      &:hover
+        &:before, &:After
+          background-color: $red_color
+
+
+
+
+.mobile_lable
+  @include lable_black
+
+.mobile_title
+  @include header_black
+
+.sud_mobile_title
+  @include sub_tittle_black
+
+
+.choice
+  position: relative
+  min-height: 900px
+  background: url('../img/Web/Bg/mobile_bg.png') center (center / cover) no-repeat
+  padding: 0px 0 137px 0
+
+  .black_page
+    padding: 56px 0 0 0 
+    position: absolute
+    background-color: #070716
+    width: 100%
+    height: 500px
+    top: 0
+    left: 0
+   
+  .choice_lable
+    @include lable_white
+
+  .choice_title
+    @include header_white
+        
+  .sud_choice_title
+    @include sub_tittle_white
+
+.black_page_img
+  position: relative
+  padding-top: 231px
+  margin: 0 auto
+  img
+    display: block
+    margin: 0 auto
+    width: 760px
+
+
+.buttom_text
+  padding-top: 4px
+  color: #222222
+  font-size: 17px
+  font-weight: 400
+  text-align: center
+
+.btn
+  margin: 0 auto
+  button
+    display: block
+    width: 200px
+    height: 60px
+    background-color: grey
+    font-size: 20px
+    cursor: pointer
+    border: none
+    text-align: center
+    transition: 0.3s all /* це з якою швідкість мінється цвіт або анімація */
+    &:hover /* коли наподиш мишку міняє цвіт */
+      background-color: green
+      color: yellow
+    &:active /* це коло натискаєш мінє в цей момент цвіт */
+      background-color: orange
+    &:focus /* це коли минажали на кнопку але не завершили діїю Кнопка буду в рожевому кольорі поки не закінчиш дію */
+      background-color: magenta 
+
+.require
+  padding: 68px 0 84px 0
+  &_block
+    margin: 33px 0 
+    &_nmd
+      margin-bottom: 0px
+  .requirer_title
+    color: #1CA8C3
+    font-weight: 400
+    font-size: 22px
+  .requirer_list
+    list-style-type: none
+    padding-left: 50px
+    margin-top: 22px
+    li
+      font-weight: 300
+      font-size: 17px
+      line-height: 24px
+      margin-bottom: 8px
+      position: relative
+
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        left: -32px
+        top: 3px
+        width: 21px
+        height: 20px
+        background: url('../icons/check_blue 1.png') center (center / cover) no-repeat
+  .require_descr
+    font-weight: 300
+    font-size: 17px
+    color: #1CA8C3
+
+  .warning
+    .requirer_title
+      color: #FF5656
+    .requirer_list
+      li
+        &:before
+          background: url('../icons/check_red 1.png') center (center / cover) no-repeat
+.lable
+  @include lable_black
+
+.title
+  @include header_black
+
+
+
+.world
+  min-height: 720px
+  background: url('../img/Web/Bg/world_bg.png') center (center / cover) no-repeat
+  padding-top: 48px
+  .world_lable
+    @include lable_white
+
+  .world_title
+    @include header_white
+        
+  .sud_world_title
+    @include sub_tittle_white
+
+.world_link
+  display: block
+  margin-top: 456px
+  font-weight: 400
+  font-size: 15px
+  text-align: center
+  text-transform: uppercase
+  text-decoration: none
+  color: $blue_color
+  
+footer
+  padding: 14px 23px 39px 23px
+  a
+    &:hover
+      text-decoration: none
+  .blue_line
+    display: block
+    margin: 0 auto
+    background-color: $blue_color
+    width: 300px
+    height: 7px
+  .footer_block_icon
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    padding-top: 32px
+  .footer_block_icon > div
+    width: 33%
+    &:nth-child(3)
+      display: flex
+      justify-content: flex-end
+  .footer_social
+    width: 160px
+    display: flex
+    justify-content: space-between
+    .footer_social_item
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: 0 4px
+      width: 32px
+      height: 32px
+      background-color: #070716
+      border-radius: 100%
+      text-decoration: none
+      i
+        color: #fff
+  .footer_links
+    width: 390px
+    margin: 0 auto
+    .footer_links_main
+      display: flex
+      justify-content: space-between
+      padding: 0 10px
+      a
+        color: #070716
+        font-size: 15px
+        font-weight: 300
+        text-transform: uppercase
+        text-decoration: none
+    .footer_links_sub
+      display: flex
+      justify-content: space-between
+      padding-top:10px
+      a
+        color: #070716
+        font-size: 11px
+        font-weight: 300
+        text-transform: uppercase
+        text-decoration: none
+    .footer_links_lang
+      display: block
+      padding-top: 18px
+      margin: 0 auto
+      color: $blue_color
+      font-size: 11px
+      font-weight: 400
+      text-transform: uppercase
+      text-align: center
+      text-decoration: none
+.xs_visible
+  display: none
